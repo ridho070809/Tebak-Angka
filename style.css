@@ -1,0 +1,111 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+/* Input dan Tombol */
+.input-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#guess-input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#guess-input:focus {
+    border-color: #007bff;
+}
+
+#guess-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#guess-button:hover:not(:disabled) {
+    background-color: #1e7e34;
+}
+
+#guess-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+/* Area Pesan & Feedback Visual */
+.message-area {
+    min-height: 20px; /* Agar layout tidak bergeser */
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.message-area.win {
+    background-color: #d4edda; /* Hijau muda */
+    color: #155724; /* Hijau tua */
+    border: 1px solid #c3e6cb;
+}
+
+.message-area.lose, .message-area.error {
+    background-color: #f8d7da; /* Merah muda */
+    color: #721c24; /* Merah tua */
+    border: 1px solid #f5c6cb;
+}
+
+/* Tombol Reset */
+.reset-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #0056b3;
+}
